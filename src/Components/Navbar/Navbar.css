@@ -1,0 +1,139 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* .logo {
+  width: 120px;
+  cursor: pointer;
+} */
+
+.portfolio-icon {
+  font-size: 2.5rem; /* Increased size for better visibility */
+  color: #ffcc00; /* Stylish gold color */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-icon:hover {
+  color: #da7c25; /* Changes color on hover */
+  transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Desktop Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Active Menu Item */
+.nav-menu li {
+  cursor: pointer;
+  padding: 8px 15px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-menu li:hover,
+.nav-menu .active-link {
+  color: #da7c25;
+  font-weight: bold;
+}
+
+.nav-menu .active-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #da7c25;
+  bottom: -4px;
+  left: 0;
+}
+
+/* Hide Connect Button on Mobile */
+.nav-connect {
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* Hide Connect Button on smaller screens */
+@media (max-width: 1024px) {
+  .nav-connect {
+    display: none;
+  }
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  right: 8%;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    z-index: 100;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 22px;
+    transition: 0.4s ease-in-out;
+    z-index: 99;
+  }
+
+  /* Slide-in effect */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    color: white;
+    transition: 0.3s ease;
+  }
+
+  .nav-menu li:hover,
+  .nav-menu .active-link {
+    color: #da7c25;
+  }
+
+  /* Menu Icon Styles */
+  .icon-bars,
+  .icon-close {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,176 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px; /* Reduced gap for better spacing */
+  padding: 20px;
+  margin-top: -30px; /* Adjusted to avoid too much space above */
+}
+
+.hero img {
+  margin-top: 40px;
+  width: 180px; /* Slightly increased size */
+  height: 180px;
+  border-radius: 50%; /* Makes image circular */
+  object-fit: cover; /* Ensures proper scaling inside the circle */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Tablets */
+  .hero img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Small Tablets & Large Phones */
+  .hero img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.hero h1 {
+  text-align: center;
+  width: 75%;
+  font-size: 55px; /* Slightly smaller for a modern look */
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  font-size: 50px; /* Balanced with the main text */
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  width: 65%;
+  text-align: center;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.hero-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjusted for better spacing */
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  flex-wrap: nowrap; /* Ensures buttons stay on the same line */
+}
+
+.hero-connect,
+.hero-resume {
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.3s;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.hero-connect {
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  cursor: pointer;
+  color: white;
+}
+
+.hero-resume {
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.hero-connect:hover {
+  border: 2px solid white;
+  transform: scale(1.05);
+}
+
+.hero-resume:hover {
+  border-color: #b415ff;
+  transform: scale(1.05);
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
+    width: 80%;
+  }
+  .hero h1 span {
+    font-size: 40px;
+  }
+  .hero p {
+    width: 70%;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+    width: 85%;
+  }
+  .hero h1 span {
+    font-size: 34px;
+  }
+  .hero p {
+    width: 80%;
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .hero img {
+    margin-top: 30px;
+    width: 140px;
+  }
+  .hero-action {
+    gap: 10px; /* Reduce gap for smaller screens */
+    flex-wrap: nowrap; /* Ensures buttons stay in the same row */
+  }
+  .hero-connect,
+  .hero-resume {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+    width: 90%;
+  }
+  .hero h1 span {
+    font-size: 26px;
+  }
+  .hero p {
+    width: 90%;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .hero img {
+    width: 120px;
+  }
+  .hero-action {
+    flex-wrap: wrap; /* Allows wrapping only when necessary */
+  }
+  .hero-connect,
+  .hero-resume {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
