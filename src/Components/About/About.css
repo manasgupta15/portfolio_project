@@ -173,3 +173,49 @@
     font-size: 18px;
   }
 }
+
+/* Add these new styles to your existing CSS */
+.skill-meter {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  transition: width 0.5s ease-in-out;
+}
+
+.skill-percent {
+  min-width: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-percent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-skill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .skill-meter {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .skill-percent {
+    align-self: flex-end;
+  }
+}

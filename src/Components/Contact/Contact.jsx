@@ -48,11 +48,11 @@ const Contact = () => {
               <p>manasgupta.123.mg12@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <img src={location_icon} alt="" />
+              <img src={call_icon} alt="" />
               <p>+91-6396-271-506</p>
             </div>
             <div className="contact-detail">
-              <img src={call_icon} alt="" />
+              <img src={location_icon} alt="" />
               <p>Saharanpur, Uttar Pradesh</p>
             </div>
           </div>

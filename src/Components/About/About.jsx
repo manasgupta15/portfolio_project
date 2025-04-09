@@ -3,6 +3,18 @@ import "./About.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 
 const About = () => {
+  // Skill data with percentages
+  const skills = [
+    { name: "JavaScript (ES6+)", level: 80 },
+    { name: "TypeScript", level: 75 },
+    { name: "React.js & Redux", level: 85 },
+    { name: "Node.js & Express.js", level: 80 },
+    { name: "MongoDB & MySQL", level: 70 },
+    { name: "Tailwind CSS & Bootstrap", level: 85 },
+    { name: "RESTful APIs & Authentication", level: 75 },
+    { name: "Git & GitHub", level: 90 },
+  ];
+
   return (
     <div className="about">
       <div className="about-title">
@@ -29,38 +41,18 @@ const About = () => {
             </p>
           </div>
           <div className="about-skills">
-            <div className="about-skill">
-              <p>JavaScript (ES6+)</p>
-              <hr style={{ width: "80%" }} />
-            </div>
-            <div className="about-skill">
-              <p>TypeScript</p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>React.js & Redux</p>
-              <hr style={{ width: "85%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Node.js & Express.js</p>
-              <hr style={{ width: "80%" }} />
-            </div>
-            <div className="about-skill">
-              <p>MongoDB & MySQL</p>
-              <hr style={{ width: "70%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Tailwind CSS & Bootstrap</p>
-              <hr style={{ width: "85%" }} />
-            </div>
-            <div className="about-skill">
-              <p>RESTful APIs & Authentication</p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>Git & GitHub</p>
-              <hr style={{ width: "90%" }} />
-            </div>
+            {skills.map((skill, index) => (
+              <div className="about-skill" key={index}>
+                <p>{skill.name}</p>
+                <div className="skill-meter">
+                  <div
+                    className="skill-level"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+                <span className="skill-percent">{skill.level}%</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
